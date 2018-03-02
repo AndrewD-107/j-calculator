@@ -1,61 +1,61 @@
-.label {
+.j-calculator .label {
 	max-width: 200px;
 }
 
-.field {
+.j-calculator .field {
 	width: 100%;
 }
 
-td {
+.j-calculator td {
 	padding: 5px;
 }
 
-.row {
+.j-calculator .row {
 	width: 100%;
 	display: inline-block;
 }
 
-.cell {
+.j-calculator .cell {
 	float: left;
 	margin: 0 20px 0 20px;
 }
 
-.button {
+.j-calculator .button {
 	padding: 5px;
 }
 
-#warning {
+.j-calculator #warning {
 	color: orange;
 	margin: 10px;
 }
 
-#info {
+.j-calculator #info {
 	color: green;
 	margin: 10px;
 }
 
-#error {
+.j-calculator #error {
 	color: red;
 	margin: 10px;
 }
 
-.rates-table {
+.j-calculator .rates-table {
 	border-collapse: collapse;
 }
 
-.rates-table th {
+.j-calculator .rates-table th {
 	border: 1px solid #333;
 	background-color: #e3e3e3;
 	padding: 5px;
 }
 
-.rates-table td {
+.j-calculator .rates-table td {
 	border: 1px solid #333;
 	margin: 0;
 	padding: 0;
 }
 
-.rates-table td .input {
+.j-calculator .rates-table td .input {
 	padding: 0;
 	margin: 0;
 	font-size: 14px;
