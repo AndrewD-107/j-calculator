@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Demo calculator</title>
+	<link rel="stylesheet" type="text/css" href="../assets/style.css">
+</head>
+<body>
+<h2>Інтерактивний розрахунок плати за стандартне приєднання:</h2>
+<div id="warning"></div>
+<form id="calculator-form" action="client-server.php">
+	<table>
+		<tr>
+			<td class="label">Тип населеного пункту:</td>
+			<td>
+				<select id="settlement-type" name="settlement-type" class="field">
+					<option value="1">Місто (смт)</option>
+					<option value="2">Село</option>
+				</select>
+			</td>
+			<td id="settlement-type-info"></td>
+		</tr>
+		<tr>
+			<td class="label">Замовлена до приєднання потужність:</td>
+			<td><input id="ordered-energy" name="ordered-energy" type="text" value="0" class="field" /></td>
+			<td id="ordered-energy-info"></td>
+		</tr>
+		<tr>
+			<td class="label">Категорія з надійності електропостачання:</td>
+			<td>
+				<select id="reliability-category" name="reliability-category" class="field">
+					<option value="1">I категорія</option>
+					<option value="2">II категорія</option>
+					<option value="3">III категорія</option>
+				</select>
+			</td>
+			<td id="reliability-category-info"></td>
+		</tr>
+		<tr>
+			<td class="label">Схема приєднання:</td>
+			<td>
+				<select id="scheme" name="scheme" class="field">
+					<option value="2">Однофазна</option>
+					<option value="1">Трифазна</option>
+				</select>
+			</td>
+			<td id="scheme-info"></td>
+		</tr>
+		<tr>
+			<td class="label">Напруга приєднання:</td>
+			<td>
+				<select id="voltage" name="voltage" class="field">
+					<option value="1">0,4 кВ (220/380 B)</option>
+					<option value="2">10 (6) кВ</option>
+					<option value="3">35 (27) кВ</option>
+					<option value="4">110 (154) кВ</option>
+				</select>
+			</td>
+			<td id="voltage-info"></td>
+		</tr>
+		<tr>
+			<td class="label">Значення існуючої потужності:</td>
+			<td><input id="current-energy" name="current-energy" class="field" type="text" value="0" /></td>
+			<td>
+				<select id="company" name="company" disabled="disabled">
+					<option value="1">Мережі ПрАТ &laquo;Київобленерго&raquo;</option>
+					<option value="2">Абонентські мережі</option>
+				</select>
+			</td>
+			<td id="current-energy-info"></td>
+		</tr>
+	</table>
+	<p><input id="button" class="button" type="button" value="Розрахувати" /></p>
+	<hr>
+	<p>
+		<h3>Плата за приєднання становитиме:</h3>
+		<span id="grn">0</span> грн. <span id="kop">0</span> коп. (без ПДВ)<br>
+		<span id="pdv-grn">0</span> грн. <span id="pdv-kop">0</span> коп. (з ПДВ)
+	</p>
+</form>
+</body>
+<script type="text/javascript" src="../assets/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../assets/validator.js"></script>
+<script type="text/javascript" src="../assets/request.js"></script>
+</html>

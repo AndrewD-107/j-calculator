@@ -1,0 +1,18 @@
+{
+    "name": "j-calculator/j-calculator",
+    "description": "Calculate price of connection joining",
+    "type": "library",
+    "keywords": ["joining","connection","calculator","power engineering"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "AndrewND",
+            "email": "demial7@icloud.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "jcalculator\\": ""
+        }
+    }
+}

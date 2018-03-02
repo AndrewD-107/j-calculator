@@ -1,0 +1,64 @@
+.label {
+	max-width: 200px;
+}
+
+.field {
+	width: 100%;
+}
+
+td {
+	padding: 5px;
+}
+
+.row {
+	width: 100%;
+	display: inline-block;
+}
+
+.cell {
+	float: left;
+	margin: 0 20px 0 20px;
+}
+
+.button {
+	padding: 5px;
+}
+
+#warning {
+	color: orange;
+	margin: 10px;
+}
+
+#info {
+	color: green;
+	margin: 10px;
+}
+
+#error {
+	color: red;
+	margin: 10px;
+}
+
+.rates-table {
+	border-collapse: collapse;
+}
+
+.rates-table th {
+	border: 1px solid #333;
+	background-color: #e3e3e3;
+	padding: 5px;
+}
+
+.rates-table td {
+	border: 1px solid #333;
+	margin: 0;
+	padding: 0;
+}
+
+.rates-table td .input {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	padding: 5px;
+	border: 0;
+}

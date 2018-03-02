@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../assets/style.css">
+	<title>Demo admin</title>
+</head>
+<body>
+<h2>Розміри ставок плати за стандартне приєднання</h2>
+<div id="info"></div>
+<div id="warning"></div>
+<div id="error"></div>
+<form id="admin-form" action="admin-server.php">
+	<div style="display: inline-block; width: 100%;">
+		<div style="width: 200px; float: left; margin: 10px;">
+			Тип населеного пункту:
+			<select id="settlement-type" name="settlement-type" class="field">
+				<option value="1">Місто (смт)</option>
+				<option value="2">Село</option>
+			</select>
+		</div>
+		<div style="width: 200px; float: left; margin: 10px;">
+			Категорія з надійності:
+			<select id="reliability-category" name="reliability-category" class="field">
+				<option value="1">I категорія</option>
+				<option value="2">II категорія</option>
+				<option value="3">III категорія</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="cell">
+			<p>I - ступінь (до 16 кВт включно):</p>
+			<table class="rates-table">
+				<tr>
+					<th>Ступінь напруги</th><th>Трифазне приєднання</th><th>Однофазне приєднання</th>
+				</tr>
+				<tr>
+					<th>0.4</th>
+					<td><input id="stup1T1" type="text" name="stup1T1" class="input" value="0"></td>
+					<td><input id="stup1S1" type="text" name="stup1S1" class="input" value="0"></td>
+				</tr>
+				<tr>
+					<th>10 (6)</th>
+					<td><input id="stup1T2" type="text" name="stup1T2" class="input" value="0"></td>
+					<td><input id="stup1S2" type="text" name="stup1S2" class="input" value="0"></td>
+				</tr>
+				<tr>
+					<th>35 (27,5)</th>
+					<td><input id="stup1T3" type="text" name="stup1T3" class="input" value="0"></td>
+					<td><input id="stup1S3" type="text" name="stup1T3" class="input" value="0"></td>
+				</tr>
+				<tr>
+					<th>110 (154)</th>
+					<td><input id="stup1T4" type="text" name="stup1T4" class="input" value="0"></td>
+					<td><input id="stup1S4" type="text" name="stup1S4" class="input" value="0"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="cell">
+				<p>II - ступінь (від 16 кВт до 50 кВт включно):</p>
+				<table class="rates-table">
+					<tr>
+						<th>Ступінь напруги</th><th>Трифазне приєднання</th><th>Однофазне приєднання</th>
+					</tr>
+					<tr>
+						<th>0.4</th>
+						<td><input id="stup2T1" type="text" name="stup2T1" class="input" value="0"></td>
+						<td><input id="stup2S1" type="text" name="stup2S1" class="input" value="0"></td>
+					</tr>
+					<tr>
+						<th>10 (6)</th>
+						<td><input id="stup2T2" type="text" name="stup2T2" class="input" value="0"></td>
+						<td><input id="stup2S2" type="text" name="stup2S2" class="input" value="0"></td>
+					</tr>
+					<tr>
+						<th>35 (27,5)</th>
+						<td><input id="stup2T3" type="text" name="stup2T3" class="input" value="0"></td>
+						<td><input id="stup2S3" type="text" name="stup2T3" class="input" value="0"></td>
+					</tr>
+					<tr>
+						<th>110 (154)</th>
+						<td><input id="stup2T4" type="text" name="stup2T4" class="input" value="0"></td>
+						<td><input id="stup2S4" type="text" name="stup2S4" class="input" value="0"></td>
+					</tr>
+				</table>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="cell">
+		<p>III - ступінь (від 50 кВт до 160 кВт включно):</p>
+			<table class="rates-table">
+				<tr>
+					<th>Ступінь напруги</th><th>Трифазне приєднання</th><th>Однофазне приєднання</th>
+				</tr>
+				<tr>
+					<th>0.4</th>
+					<td><input id="stup3T1" type="text" name="stup3T1" class="input" value="0"></td>
+					<td><input id="stup3S1" type="text" name="stup3S1" class="input" value="0"></td>
+				</tr>
+				<tr>
+					<th>10 (6)</th>
+					<td><input id="stup3T2" type="text" name="stup3T2" class="input" value="0"></td>
+					<td><input id="stup3S2" type="text" name="stup3S2" class="input" value="0"></td>
+				</tr>
+				<tr>
+					<th>35 (27,5)</th>
+					<td><input id="stup3T3" type="text" name="stup3T3" class="input" value="0"></td>
+					<td><input id="stup3S3" type="text" name="stup3T3" class="input" value="0"></td>
+				</tr>
+				<tr>
+					<th>110 (154)</th>
+					<td><input id="stup3T4" type="text" name="stup3T4" class="input" value="0"></td>
+					<td><input id="stup3S4" type="text" name="stup3S4" class="input" value="0"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<p><input id="update" class="button" type="button" value="Зберегти" /></p>
+</form>
+</div>
+</body>
+<script type="text/javascript" src="../../assets/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../assets/validator.js"></script>
+<script type="text/javascript" src="../../assets/admin-request.js"></script>
+</html>
